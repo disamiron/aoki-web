@@ -1,0 +1,39 @@
+<ng-container *transloco="let translate">
+  <div class="review" *ngIf="userReviewImg">
+    <app-text
+      [text]="
+        translate(
+          'eRevisionModule.reviews.reviewers.user' + (index + 1) + '.text'
+        )
+      "
+      [textSize]="TextSizes.headline3"
+    ></app-text>
+    <div class="review__info">
+      <div class="separator"></div>
+      <div class="user-info">
+        <app-img class="user-info__logo" [img]="userReviewImg"></app-img>
+        <div class="user-info__text">
+          <app-text
+            [text]="
+              translate(
+                'eRevisionModule.reviews.reviewers.user' + (index + 1) + '.name'
+              )
+            "
+            [textSize]="TextSizes.smallText"
+          ></app-text>
+          <app-text
+            [text]="
+              translate(
+                'eRevisionModule.reviews.reviewers.user' +
+                  (index + 1) +
+                  '.position'
+              )
+            "
+            [textSize]="TextSizes.smallText"
+            [color]="ColorMap.grey"
+          ></app-text>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

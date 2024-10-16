@@ -1,0 +1,39 @@
+<!-- <div class="container" *ngIf="userReviewsImgArray.length">
+  <div class="container__header">
+    <ng-container *transloco="let translate">
+      <app-text
+        [text]="translate('eRevisionModule.reviews.title')"
+        [textSize]="TextSizes.caption"
+        [color]="ColorMap.blue"
+      ></app-text>
+      <div class="management">
+        <app-text
+          [text]="translate('eRevisionModule.reviews.subtitle')"
+          [textSize]="TextSizes.headline2"
+        ></app-text>
+        <div class="management__buttons">
+          <app-circle-button
+            [img]="'keyboard_arrow_left'"
+            [disabled]="currentSlide === 0"
+            (click)="slider?.prev()"
+          ></app-circle-button>
+          <app-circle-button
+            [img]="'keyboard_arrow_right'"
+            [disabled]="currentSlide === userReviewsImgArray.length - 1"
+            (click)="slider?.next()"
+          ></app-circle-button>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <div class="container__reviews">
+    <div class="keen-slider keen-slider--vertical custom" #sliderPreviewRef>
+      <app-review-card
+        *ngFor="let userReviewImg of userReviewsImgArray; index as index"
+        [class]="'keen-slider__slide number-slide' + index"
+        [userReviewImg]="userReviewImg"
+        [index]="index"
+      ></app-review-card>
+    </div>
+  </div>
+</div> -->

@@ -1,0 +1,139 @@
+.headline-1 {
+  @extend .weight-600, .font-44-56;
+}
+
+.headline-2 {
+  @extend .weight-600, .font-32-44;
+}
+
+.headline-3 {
+  @extend .weight-500, .font-20-28;
+}
+
+.big-text {
+  @extend .weight-500, .font-32-44-big;
+}
+
+.parapgraph {
+  @extend .weight-400, .font-20-32;
+}
+
+.small-text {
+  @extend .weight-400, .font-16-24;
+}
+
+.caption {
+  @extend .weight-700, .font-14-16-ls;
+}
+
+.x-100 {
+  @extend .weight-700, .font-44-56;
+}
+
+.menu-item {
+  @extend .weight-500, .font-14-16;
+}
+
+.weight-700 {
+  font-style: normal;
+  font-weight: 700;
+}
+
+.weight-600 {
+  font-style: normal;
+  font-weight: 600;
+}
+
+.weight-500 {
+  font-style: normal;
+  font-weight: 500;
+}
+
+.weight-400 {
+  font-style: normal;
+  font-weight: 400;
+}
+
+.font-44-56 {
+  font-size: 44px;
+  line-height: 56px;
+}
+
+.font-32-44 {
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.font-32-44-big {
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.font-20-28 {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.font-20-32 {
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.font-16-24 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.font-14-16 {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.font-14-16-ls {
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 500px) {
+  .font-44-56 {
+    font-size: 32px;
+    line-height: 44px;
+  }
+
+  .font-32-44 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .font-32-44-big {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .font-20-28 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .font-20-32 {
+    font-size: 17px;
+    line-height: 28px;
+  }
+
+  .font-16-24 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .font-14-16 {
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  .font-14-16-ls {
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+  }
+}

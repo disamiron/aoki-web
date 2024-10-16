@@ -1,0 +1,39 @@
+{
+  "eRevisionModule": {
+    "demoTextBtn": "Demo Version",
+    "headerLinks": {
+      "about": "About the App",
+      "howItWorks": "How It Works",
+      "advantages": "Advantages",
+      "contacts": "Сontacts"
+    },
+    "main": {
+      "title": "Sell and Buy as easily as chatting with your friends!"
+    },
+    "howItWork": {
+      "title": "HOW IT WORKS",
+      "step1": "Select a store from the list of pre-registered stores for the inventory check",
+      "step2": "Upload a file with accounting stock data to compare with real data",
+      "step3": "Inventory products using your phone camera or manually input the barcode and local code",
+      "step4": "Enter the quantity of the scanned product"
+    },
+    "advantages": {
+      "title": "Advantages",
+      "subtitle": "Why Our App is the Perfect Choice",
+      "reason1": "Speed and accuracy of inventory checks",
+      "reason2": "Ease of use and intuitive interface",
+      "reason3": "Flexible adaptation. We adapt E-Revision to any file format upon request",
+      "reason4": "Saves time and resources for entrepreneurs"
+    },
+    "tryItNow": {
+      "head": "Try It Now",
+      "title": "Experience the Benefits in Practice",
+      "subtitle": "Try our app’s demo version and see how easy and fast inventory management can be in your store"
+    },
+    "footer": {
+      "title": "Try Our Product Today!",
+      "subtitle": "Fill out the contact form to get access to the demo version. Don’t miss the chance to improve your business!",
+      "rights": "© 2024 Aoki. All rights reserved."
+    }
+  }
+}

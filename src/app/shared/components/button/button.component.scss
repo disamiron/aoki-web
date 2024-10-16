@@ -1,0 +1,54 @@
+@import "src/styles/variables";
+@import "src/styles/fonts";
+
+.button {
+  border-radius: 10px;
+  display: inline-block;
+  text-align: center;
+  font-family: "Inter", sans-serif !important;
+  text-decoration: none !important;
+}
+
+::ng-deep span {
+  white-space: nowrap;
+  font-family: "Inter", sans-serif !important;
+}
+
+.button-big {
+  min-height: 40px;
+  padding: 0 16px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--light-black) !important;
+}
+
+.button-big:hover {
+  color: var(--aoki) !important;
+  background-color: rgba(49, 133, 252, 0.08);
+}
+
+.button-average {
+  min-height: 44px;
+  padding: 0 24px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--white) !important;
+  background-color: var(--aoki);
+}
+
+.button-average:hover {
+  background-color: var(--dark-aoki);
+}
+
+.reverse {
+  color: var(--aoki) !important;
+  background-color: var(--white) !important;
+}
+
+.disabled {
+  background-color: var(--light-aoki) !important;
+}

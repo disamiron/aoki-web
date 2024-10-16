@@ -1,0 +1,16 @@
+@import "src/styles/variables";
+@import "src/styles/fonts";
+
+.circle-button {
+  background-color: var(--aoki) !important;
+}
+
+.disabled {
+  opacity: 0.1;
+}
+
+.menu {
+  background-color: #3185fc1a !important;
+  color: var(--aoki);
+  box-shadow: none !important;
+}

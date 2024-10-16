@@ -1,0 +1,48 @@
+<ng-container *transloco="let translate"
+  ><div class="footer">
+    <div class="footer__main">
+      <div class="left-block">
+        <app-text
+          [text]="translate('eRevisionModule.footer.title')"
+          [textSize]="TextSizes.headline2"
+          [color]="ColorMap.white"
+        ></app-text>
+        <app-text
+          [text]="translate('eRevisionModule.footer.subtitle')"
+          [textSize]="TextSizes.smallText"
+          [color]="ColorMap.white"
+          [opacity]="0.6"
+        ></app-text>
+      </div>
+    </div>
+    <div class="footer__extra">
+      <a [href]="'mailto:' + aokiMail" target="_blank">
+        <app-text
+          [text]="aokiMail"
+          [textSize]="TextSizes.menuItem"
+          [color]="ColorMap.white"
+          autocomplete="off"
+          [opacity]="0.6"
+        ></app-text
+      ></a>
+      <app-text
+        [text]="translate('eRevisionModule.footer.rights')"
+        [textSize]="TextSizes.menuItem"
+        [color]="ColorMap.white"
+        autocomplete="off"
+        [opacity]="0.6"
+      ></app-text>
+      <div class="links">
+        <a href="https://t.me/aoki_seller_bot" target="_blank">
+          <app-text
+            [text]="'Telegram'"
+            [textSize]="TextSizes.menuItem"
+            [color]="ColorMap.white"
+            autocomplete="off"
+            [opacity]="0.6"
+          ></app-text
+        ></a>
+      </div>
+    </div>
+  </div>
+</ng-container>

@@ -1,0 +1,87 @@
+:host {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: var(--light-grey);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1240px;
+  width: 100%;
+  margin: 80px 20px;
+  &__header {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    .management {
+      display: flex;
+      justify-content: space-between;
+
+      &__buttons {
+        display: flex;
+        gap: 10px;
+      }
+    }
+  }
+  &__reviews {
+    margin: 40px 0;
+    .custom {
+      min-width: 700px;
+      max-width: 700px;
+      overflow: inherit;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    &__reviews {
+      margin: 40px 0;
+      .custom {
+        min-width: 600px;
+        max-width: 600px;
+      }
+    }
+    &__header {
+      .management {
+        &__buttons {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .container {
+    &__reviews {
+      .custom {
+        min-width: 500px;
+        max-width: 500px;
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .container {
+    &__reviews {
+      .custom {
+        min-width: 350px;
+        max-width: 350px;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    &__reviews {
+      .custom {
+        min-width: 250px;
+        max-width: 250px;
+      }
+    }
+  }
+}

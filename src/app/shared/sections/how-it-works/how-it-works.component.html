@@ -1,0 +1,48 @@
+<div class="how-it-works">
+  <div class="how-it-works__logo">
+    <div class="keen-slider keen-slider--vertical custom" #sliderImgRef>
+      <video
+        *ngFor="let howItWork of howItWorksVideoArray; index as index"
+        [class]="'keen-slider__slide img number-slide' + index"
+        [src]="howItWork"
+        [autoplay]="index === 0"
+      ></video>
+    </div>
+  </div>
+
+  <div class="how-it-works__list">
+    <ng-container *transloco="let translate">
+      <app-text
+        class="title"
+        [text]="translate('eRevisionModule.howItWork.title')"
+        [color]="ColorMap.black"
+        [textSize]="TextSizes.caption"
+      ></app-text>
+
+      <div class="container">
+        <ng-container
+          *ngFor="
+            let howItWorksImg of howItWorksVideoArray;
+            last as last;
+            index as i
+          "
+        >
+          <div class="item">
+            <div class="circle" [class.active]="currentSlide >= i"></div>
+            <div>
+              <app-text
+                [text]="translate('eRevisionModule.howItWork.step' + (i + 1))"
+                [textSize]="TextSizes.smallText"
+                class="target"
+                (click)="slider?.moveToIdx(i)"
+              ></app-text>
+              <div class="separator" *ngIf="!last"></div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+<div class="background"></div>

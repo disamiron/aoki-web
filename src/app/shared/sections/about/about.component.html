@@ -1,0 +1,14 @@
+<ng-container *transloco="let translate">
+  <div class="about">
+    <app-text
+      class="about__title"
+      [text]="translate('eRevisionModule.about.title')"
+      [textSize]="TextSizes.caption"
+      [color]="ColorMap.blue"
+    ></app-text>
+    <app-text
+      [text]="translate('eRevisionModule.about.subtitle')"
+      [textSize]="TextSizes.bigText"
+    ></app-text>
+  </div>
+</ng-container>
