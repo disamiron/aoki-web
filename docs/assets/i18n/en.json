@@ -12,10 +12,10 @@
     },
     "howItWork": {
       "title": "HOW IT WORKS",
-      "step1": "Select a store from the list of pre-registered stores for the inventory check",
-      "step2": "Upload a file with accounting stock data to compare with real data",
-      "step3": "Inventory products using your phone camera or manually input the barcode and local code",
-      "step4": "Enter the quantity of the scanned product"
+      "step1": "Add shop",
+      "step2": "Bind with channel",
+      "step3": "Upload products with AI",
+      "step4": "Post product to the channel"
     },
     "advantages": {
       "title": "Advantages",
