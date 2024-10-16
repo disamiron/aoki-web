@@ -29,12 +29,23 @@
         >
           <div class="item">
             <div class="circle" [class.active]="currentSlide >= i"></div>
-            <div>
+            <div class="description">
               <app-text
                 [text]="translate('eRevisionModule.howItWork.step' + (i + 1))"
-                [textSize]="TextSizes.smallText"
+                [textSize]="TextSizes.parapgraph"
+                [color]="currentSlide >= i ? ColorMap.aoki : ColorMap.black"
                 class="target"
                 (click)="slider?.moveToIdx(i)"
+              ></app-text>
+              <app-text
+                @fadeInOut
+                *ngIf="currentSlide === i"
+                [text]="
+                  translate('eRevisionModule.howItWork.subtitle' + (i + 1))
+                "
+                [textSize]="TextSizes.smallText"
+                [color]="ColorMap.grey"
+                class="description__title"
               ></app-text>
               <div class="separator" *ngIf="!last"></div>
             </div>

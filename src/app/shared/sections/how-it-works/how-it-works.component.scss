@@ -59,6 +59,12 @@
       .target {
         cursor: pointer;
       }
+      animation-duration: 4s;
+
+      .description {
+        display: flex;
+        flex-direction: column;
+      }
     }
   }
 }

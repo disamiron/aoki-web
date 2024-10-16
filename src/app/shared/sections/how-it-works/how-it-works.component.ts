@@ -8,11 +8,29 @@ import {
 import { howItWorksVideoArray } from '../../constants';
 import { ColorMap, TextSizes } from '../../enums';
 import KeenSlider, { KeenSliderInstance } from 'keen-slider';
+import {
+  trigger,
+  state,
+  style,
+  transition,
+  animate,
+} from '@angular/animations';
 
 @Component({
   selector: 'app-how-it-works',
   templateUrl: './how-it-works.component.html',
   styleUrls: ['./how-it-works.component.scss'],
+  animations: [
+    trigger('fadeInOut', [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'translateY(-10px)' }),
+        animate(
+          '300ms ease-out',
+          style({ opacity: 1, transform: 'translateY(0)' })
+        ),
+      ]),
+    ]),
+  ],
 })
 export class HowItWorksComponent implements AfterViewInit, OnDestroy {
   @ViewChild('sliderImgRef') public sliderImgRef:
