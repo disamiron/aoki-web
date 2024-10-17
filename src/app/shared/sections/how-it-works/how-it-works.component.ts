@@ -23,11 +23,8 @@ import {
   animations: [
     trigger('fadeInOut', [
       transition(':enter', [
-        style({ opacity: 0, transform: 'translateY(-10px)' }),
-        animate(
-          '300ms ease-out',
-          style({ opacity: 1, transform: 'translateY(0)' })
-        ),
+        style({ opacity: 0 }),
+        animate('400ms ease-in', style({ opacity: 1 })),
       ]),
     ]),
   ],
@@ -51,14 +48,18 @@ export class HowItWorksComponent implements AfterViewInit, OnDestroy {
     if (this.sliderImgRef && this.sliderImgRef?.nativeElement) {
       this.slider = new KeenSlider(this.sliderImgRef?.nativeElement, {
         slideChanged: (s) => {
-          const prevVideo: HTMLVideoElement = document.getElementsByClassName(
-            `number-slide${this.currentSlide}`
-          )[0] as HTMLVideoElement;
+          const prevVideo: HTMLVideoElement | undefined =
+            document.getElementsByClassName(
+              `number-slide${this.currentSlide}`
+            )[0] as HTMLVideoElement;
+
           if (prevVideo) {
             prevVideo.pause();
           }
+
           this.currentSlide = s.track.details.rel;
-          const currentVideo: HTMLVideoElement =
+
+          const currentVideo: HTMLVideoElement | undefined =
             document.getElementsByClassName(
               `number-slide${this.currentSlide}`
             )[0] as HTMLVideoElement;

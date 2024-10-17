@@ -21,10 +21,11 @@ export enum ColorMap {
 
   lightBlack = '#2a2d34',
   blue = '#3185fc',
-  grey = '#7f8185',
+  grey = '#57585b',
   lightGrey = '#f4f9ff',
 
-  aoki = '#96dbc6',
+  // aoki = '#96dbc6',
+  aoki = '#a8e6cf',
   lightAoki = '#93f1c5',
   darkAoki = '#497e65',
   mainAoki = '#ceffef',

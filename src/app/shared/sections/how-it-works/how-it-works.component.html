@@ -1,6 +1,6 @@
 <div class="how-it-works">
-  <div class="how-it-works__logo">
-    <div class="keen-slider keen-slider--vertical custom" #sliderImgRef>
+  <div class="how-it-works__video">
+    <div class="keen-slider custom" #sliderImgRef>
       <video
         *ngFor="let howItWork of howItWorksVideoArray; index as index"
         [class]="'keen-slider__slide img number-slide' + index"
@@ -16,7 +16,7 @@
         class="title"
         [text]="translate('eRevisionModule.howItWork.title')"
         [color]="ColorMap.black"
-        [textSize]="TextSizes.caption"
+        [textSize]="TextSizes.bigText"
       ></app-text>
 
       <div class="container">
@@ -33,7 +33,9 @@
               <app-text
                 [text]="translate('eRevisionModule.howItWork.step' + (i + 1))"
                 [textSize]="TextSizes.parapgraph"
-                [color]="currentSlide >= i ? ColorMap.aoki : ColorMap.black"
+                [color]="
+                  currentSlide >= i ? ColorMap.aoki : ColorMap.lightBlack
+                "
                 class="target"
                 (click)="slider?.moveToIdx(i)"
               ></app-text>
