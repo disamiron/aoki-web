@@ -69,6 +69,6 @@ export class HowItWorksComponent implements AfterViewInit, OnDestroy {
 
   public onPlayerReady(e: VgApiService) {
     this.apiService = e;
-    this.apiService.videogularElement.firstChild.play();
+    this.apiService?.videogularElement.children[this.currentSlide].play();
   }
 }
