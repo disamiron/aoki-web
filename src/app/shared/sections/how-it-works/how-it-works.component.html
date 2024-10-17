@@ -11,6 +11,7 @@
         <video
           *ngFor="let howItWork of howItWorksVideoArray; index as index"
           #media
+          [vgMedia]="$any(media)"
           [id]="'video' + index"
           [class]="'keen-slider__slide player number-slide' + index"
           preload="auto"
