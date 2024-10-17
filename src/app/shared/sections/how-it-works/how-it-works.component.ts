@@ -51,13 +51,11 @@ export class HowItWorksComponent implements AfterViewInit, OnDestroy {
     if (this.sliderImgRef && this.sliderImgRef?.nativeElement) {
       this.slider = new KeenSlider(this.sliderImgRef?.nativeElement, {
         slideChanged: (s) => {
-          this.apiService?.videogularElement.children[
-            this.currentSlide
-          ].pause();
+          this.apiService?.getMediaById('video' + this.currentSlide).pause();
 
           this.currentSlide = s.track.details.rel;
 
-          this.apiService?.videogularElement.children[this.currentSlide].play();
+          this.apiService?.getMediaById('video' + this.currentSlide).play();
         },
       });
     }
@@ -67,8 +65,11 @@ export class HowItWorksComponent implements AfterViewInit, OnDestroy {
     this.slider?.destroy();
   }
 
-  public onPlayerReady(e: VgApiService) {
-    this.apiService = e;
-    this.apiService?.videogularElement.children[this.currentSlide].play();
+  public onPlayerReady(event: VgApiService | undefined) {
+    if (event) {
+      this.apiService = event;
+      this.apiService.fsAPI.isFullscreen = false;
+      this.apiService.getMediaById('video' + this.currentSlide).play();
+    }
   }
 }
