@@ -1,12 +1,24 @@
 <div class="how-it-works">
   <div class="how-it-works__video">
     <div class="keen-slider custom" #sliderImgRef>
-      <video
+      <!-- <video
         *ngFor="let howItWork of howItWorksVideoArray; index as index"
         [class]="'keen-slider__slide img number-slide' + index"
         [src]="howItWork"
         [autoplay]="index === 0"
-      ></video>
+      ></video> -->
+      <vg-player (onPlayerReady)="onPlayerReady($event)" class="player">
+        <video
+          *ngFor="let howItWork of howItWorksVideoArray; index as index"
+          #media
+          [id]="'video' + index"
+          [class]="'keen-slider__slide player number-slide' + index"
+          preload="auto"
+          [controls]="false"
+        >
+          <source [src]="howItWork" type="video/mp4" />
+        </video>
+      </vg-player>
     </div>
   </div>
 

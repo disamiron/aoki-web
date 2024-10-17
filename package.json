@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:github": "ng build --base-href='https://disamiron.github.io/aoki-web/'",
+    "build:git": "ng build --base-href='https://disamiron.github.io/aoki-web/'",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -22,6 +22,7 @@
     "@angular/router": "^15.2.0",
     "@ngneat/transloco": "^4.3.0",
     "keen-slider": "^6.8.6",
+    "@videogular/ngx-videogular": "^7.0.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"

@@ -15,6 +15,10 @@ import { ReviewsComponent } from './components/reviews/reviews.component';
 import { CircleButtonComponent } from './components/circle-button/circle-button.component';
 import { ReviewCardComponent } from './components/review-card/review-card.component';
 import { TranslocoRootModule } from '../transloco-root.module';
+import { VgCoreModule } from '@videogular/ngx-videogular/core';
+import { VgControlsModule } from '@videogular/ngx-videogular/controls';
+import { VgOverlayPlayModule } from '@videogular/ngx-videogular/overlay-play';
+import { VgBufferingModule } from '@videogular/ngx-videogular/buffering';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,15 @@ import { TranslocoRootModule } from '../transloco-root.module';
     CircleButtonComponent,
     ReviewCardComponent,
   ],
-  imports: [CommonModule, MaterialModule, TranslocoRootModule],
+  imports: [
+    CommonModule,
+    MaterialModule,
+    TranslocoRootModule,
+    VgCoreModule,
+    VgControlsModule,
+    VgOverlayPlayModule,
+    VgBufferingModule,
+  ],
   exports: [
     MaterialModule,
     TranslocoRootModule,

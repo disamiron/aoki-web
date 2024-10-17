@@ -15,6 +15,7 @@ import {
   transition,
   animate,
 } from '@angular/animations';
+import { VgApiService } from '@videogular/ngx-videogular/core';
 
 @Component({
   selector: 'app-how-it-works',
@@ -38,6 +39,8 @@ export class HowItWorksComponent implements AfterViewInit, OnDestroy {
 
   public slider: KeenSliderInstance | null = null;
 
+  public apiService: VgApiService | null = null;
+
   public readonly TextSizes = TextSizes;
 
   public readonly ColorMap = ColorMap;
@@ -48,26 +51,13 @@ export class HowItWorksComponent implements AfterViewInit, OnDestroy {
     if (this.sliderImgRef && this.sliderImgRef?.nativeElement) {
       this.slider = new KeenSlider(this.sliderImgRef?.nativeElement, {
         slideChanged: (s) => {
-          const prevVideo: HTMLVideoElement | undefined =
-            document.getElementsByClassName(
-              `number-slide${this.currentSlide}`
-            )[0] as HTMLVideoElement;
-
-          if (prevVideo) {
-            prevVideo.pause();
-          }
+          this.apiService?.videogularElement.children[
+            this.currentSlide
+          ].pause();
 
           this.currentSlide = s.track.details.rel;
 
-          const currentVideo: HTMLVideoElement | undefined =
-            document.getElementsByClassName(
-              `number-slide${this.currentSlide}`
-            )[0] as HTMLVideoElement;
-
-          if (currentVideo) {
-            currentVideo.currentTime = 0;
-            currentVideo.play();
-          }
+          this.apiService?.videogularElement.children[this.currentSlide].play();
         },
       });
     }
@@ -75,5 +65,10 @@ export class HowItWorksComponent implements AfterViewInit, OnDestroy {
 
   public ngOnDestroy() {
     this.slider?.destroy();
+  }
+
+  public onPlayerReady(e: VgApiService) {
+    this.apiService = e;
+    this.apiService.videogularElement.firstChild.play();
   }
 }
